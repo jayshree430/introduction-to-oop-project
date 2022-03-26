@@ -1,0 +1,42 @@
+@startuml
+
+interface Dance{
+    +spin():void
+    +doTheCaterpillar():void
+    +jump():void
+
+}
+Dance <|.. Bird
+
+abstract class Bird{
+    #String name;
+    #String color;
+
+    +abstract speak():void
+    +fly():void
+
+}
+
+
+
+class Pigeon{
+    +speak():void
+    +eatPizza():void
+    +sleep():void
+}
+Bird <|-- Pigeon
+
+class Penguin{
+    +speak():void
+    +fly():void
+}
+
+Bird <|-- Penguin
+
+class Parrot{
+    +speak():void
+    +fly():void
+}
+
+Bird <|-- Parrot
+@enduml
